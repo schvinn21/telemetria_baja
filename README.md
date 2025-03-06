@@ -1,4 +1,4 @@
-# Explicação Detalhada sobre a Rede CAN e sua Implementação no Projeto
+# Explicação sobre a Rede CAN e sua Implementação no Projeto
 
 ## Introdução à Rede CAN
 
