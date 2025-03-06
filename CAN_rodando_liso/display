@@ -1,0 +1,71 @@
+// Definição dos pinos para os segmentos do display (a, b, c, d, e, f, g)
+const int segmentos[] = {11, 12, 4, 5, 6, 7, 8}; 
+// Pinos dos dígitos (dezena e unidade)
+const int digitos[] = {9, 10}; 
+
+// Tabela dos números para display de 7 segmentos (cátodo comum)
+const byte numeros[10] = {
+  B00111111, // 0
+  B00000110, // 1
+  B01011011, // 2
+  B01001111, // 3
+  B01100110, // 4
+  B01101101, // 5
+  B01111101, // 6
+  B00000111, // 7
+  B01111111, // 8
+  B01101111  // 9
+};
+
+void mostrarNumero(int numero) {
+  int dezena = numero / 10;
+  int unidade = numero % 10;
+
+  // Desativa ambos os displays antes de trocar
+  digitalWrite(digitos[0], HIGH);
+  digitalWrite(digitos[1], HIGH);
+
+  // Ativa e exibe a dezena
+  digitalWrite(digitos[0], LOW);
+  mostrarDigito(dezena);
+  delay(5);
+
+  // Desativa ambos antes de trocar
+  digitalWrite(digitos[0], HIGH);
+  digitalWrite(digitos[1], HIGH);
+
+  // Ativa e exibe a unidade
+  digitalWrite(digitos[1], LOW);
+  mostrarDigito(unidade);
+  delay(5);
+
+  // Desativa os displays ao final
+  digitalWrite(digitos[0], HIGH);
+  digitalWrite(digitos[1], HIGH);
+}
+
+
+void mostrarDigito(int num) {
+  for (int i = 0; i < 7; i++) {
+    digitalWrite(segmentos[i], bitRead(numeros[num], i)); // Acende segmentos
+  }
+}
+
+void setup() {
+  for (int i = 0; i < 7; i++) {
+    pinMode(segmentos[i], OUTPUT);
+  }
+  for (int i = 0; i < 2; i++) {
+    pinMode(digitos[i], OUTPUT);
+    digitalWrite(digitos[i], HIGH); // Mantém apagado inicialmente
+  }
+}
+
+void loop() {
+  for (int i = 0; i < 100; i++) {
+    unsigned long tempoInicial = millis();
+    while (millis() - tempoInicial < 500) { // Mantém o número por 500ms
+      mostrarNumero(i);
+    }
+  }
+}
