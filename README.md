@@ -69,16 +69,13 @@ if (ACAN_ESP32::can.receive(frame)) {
 }
 ```
 
-## Possíveis Melhorias no Projeto
+## Melhorias no Projeto
 
-Algumas melhorias podem ser implementadas para aprimorar a telemetria do projeto:
+Algumas melhorias a serem implementadas para aprimorar a telemetria do projeto:
 
 - **Adição de um Gateway ESP32:** Um nó intermediário que coleta os dados e os envia via Wi-Fi para um servidor.
 - **Armazenamento dos Dados:** Registro das mensagens CAN em um cartão SD ou banco de dados online.
 - **Visualização em Tempo Real:** Uso de **Streamlit** para criar um painel interativo com os dados coletados.
 - **Redundância e Verificação de Erros:** Implementação de checksums extras para maior confiabilidade.
 
-## Conclusão
-
-A rede CAN do projeto está bem estruturada, permitindo a comunicação eficiente entre o Arduino e o ESP32. As mensagens são transmitidas corretamente, com IDs distintos para temperatura e velocidade. Melhorias podem ser feitas para tornar o sistema mais robusto e integrar a telemetria com um banco de dados ou um painel de monitoramento remoto.
 
