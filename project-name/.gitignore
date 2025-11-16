@@ -1,0 +1,125 @@
+# .gitignore gerado — adapte conforme necessário
+
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+Icon?
+._*
+
+# Editor/IDE
+.vscode/
+.history/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos de build/artefatos
+build/
+dist/
+out/
+bin/
+obj/
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs e cache
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+.temp/
+tmp/
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.coverage
+.coverage.*
+.cache
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+.python-version
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+celerybeat-schedule
+pytest_cache/
+
+# Node
+node_modules/
+*.tgz
+
+# Environment / Secrets
+.env
+.env.* 
+.env.local
+.secrets/
+*.key
+*.pem
+
+# Containers / Docker
+docker-compose.override.yml
+docker-compose.*.yml
+**/Dockerfile.*.local
+*.dockerignore
+
+# Test / Coverage
+coverage/
+coverage.xml
+htmlcov/
+
+# IDEs Java / Eclipse / IntelliJ
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# PlatformIO / embedded
+.pio/
+.pioenvs/
+.arduino/
+*.elf
+
+# NuGet / .NET
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+*.user
+*.suo
+*.userprefs
+*.ide.*
+
+# Misc
+thumbs.db
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Arquivos de configuração locais que não devem ser versionados
+local.settings.json
+launchSettings.json
+secret.settings.json

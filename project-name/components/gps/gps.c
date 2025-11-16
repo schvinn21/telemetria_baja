@@ -8,8 +8,8 @@
 #include "gps.h"
 
 #define UART_NUM UART_NUM_1
-#define TXD_PIN 19
-#define RXD_PIN 18
+#define TXD_PIN 33
+#define RXD_PIN 32
 #define BUF_SIZE 1024
 
 static const char *TAG = "GPS";

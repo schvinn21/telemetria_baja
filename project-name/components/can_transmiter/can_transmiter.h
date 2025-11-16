@@ -27,7 +27,9 @@ esp_err_t can_transmiter_init(void);
  * @param longitude Longitude em float (ex: -51.123456)
  * @return ESP_OK em caso de sucesso; ESP_FAIL em caso de erro no envio.
  */
-esp_err_t can_enviar_dados(int16_t ax, int16_t ay, int16_t az, float latitude, float longitude);
+//esp_err_t can_enviar_dados(int16_t ax, int16_t ay, int16_t az, float latitude, float longitude);
+
+esp_err_t can_enviar_temp_e_total_compacto(float temp1, float temp2, float total_liters);
 
 #ifdef __cplusplus
 }
